@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class TransactionService {
-    private int calculateRewardPoints(Transaction transaction) {
+    public int calculateRewardPoints(Transaction transaction) {
         int points = 0;
         if (transaction.getAmount() > 100) {
             points += 2 * (transaction.getAmount() - 100);
